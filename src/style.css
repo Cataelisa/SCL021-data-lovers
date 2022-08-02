@@ -9,15 +9,36 @@ body {
     border-color: black;
     
 }
-
-#small-title {
-    margin-left: 350px;
+.header {
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
+#small-title{
+    position: absolute;
+    top: 5px;
+    left: 350px;
+}
+
+/*#small-title {
+    margin-left: 350px;
+}*/
+
 #titulo-harry-potter {
-    margin-left: 270px;
-    margin-top: 2px;
-    width: 900px;
-    height: 250px;
-    padding: 1px;
+    margin-top: 35px;
+    margin-left: 330px;
+    width: 750px;
+    height: 220px;
+}
+
+#titulo-elige-libro {
+    margin-left: 530px;
+}
+
+#books {
+    margin-left: 450px;
+    width: 550px;
+    height: 450px;
+    
 }
