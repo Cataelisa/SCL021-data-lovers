@@ -7,8 +7,10 @@ body {
     font-family: fantasy;
     color: whitesmoke;
     border-color: black;
-    
+    /*max-width: 100%;
+    height: auto; */
 }
+
 .header {
     position: relative;
     display: inline-block;
@@ -28,6 +30,8 @@ body {
     margin-left: 330px;
     width: 750px;
     height: 220px;
+    /*max-width: 100%;
+    height: auto;*/
 }
 
 #titulo-elige-libro {
