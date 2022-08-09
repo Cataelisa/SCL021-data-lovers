@@ -1,7 +1,8 @@
 //import { example } from "./data.js";
-// import data from './data/lol/lol.js';
-//import data from "./data/pokemon/pokemon.js";
-// import data from './data/rickandmorty/rickandmorty.js';
+
+//import data from "./data/harrypotter/data.js";
+
+//console.log(example, data);
 
 function goToCharacters() {
   // show the  characters
@@ -16,5 +17,3 @@ function goToCharacters() {
 //go to characters
 let showCharacters = document.getElementById("personajes");
 showCharacters.addEventListener("click", goToCharacters);
-
-//console.log(example, data);
