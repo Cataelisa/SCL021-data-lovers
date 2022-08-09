@@ -22,6 +22,7 @@ body {
 }*/
 
 #encabezado {
+   top: 15px;
     position: relative;
     display: inline-block;
     text-align: center;
@@ -29,7 +30,7 @@ body {
 
 #small-title{
     position: absolute;
-    top: 5px;
+    top: 20px;
     left: 350px;
     text-shadow: 0 0 4px rgb(6, 6, 6);
     -webkit-text-stroke: 0.5px rgb(6, 6, 6);
@@ -47,70 +48,86 @@ body {
 
 #titulo-elige-libro {
     position: absolute;
-    top: 238px;
-    left: 548px;
+    top: 258px;
+    left: 540px;
     text-shadow: 0 0 4px rgb(6, 6, 6);
     -webkit-text-stroke: 0.5px rgb(6, 6, 6);
 }
 
-#books {
+.books {
     margin-left: 450px;
     margin-top: 40px;
     width: 550px;
     height: 450px;
+    position:relative;
 }
 
-#personajes {
+#personajes{
     cursor: pointer;
     transform: rotate(-90deg); 
     width: 100px;
     position: absolute;
-    top: 546px;
-    left: 465px;
+    top: 566px;
+    left: 460px;
     text-shadow: 0 0 4px rgb(6, 6, 6);
     -webkit-text-stroke: 0.1px rgb(6, 6, 6);
     color: seashell;
 }
+#personajes:hover{
+    font-size: large;
+}
+
 #hechizos {
     cursor: pointer;
     transform: rotate(-92deg);     
     width: 100px;
     position: absolute;
-    top: 570px;
+    top: 580px;
     left: 558px;
     text-shadow: 0 0 4px rgb(6, 6, 6);
     -webkit-text-stroke: 0.1px rgb(6, 6, 6);
+}
+#hechizos:hover{
+  font-size: large;
 }
 
 #datos-curiosos{
     cursor: pointer;
     transform: rotate(-90deg);    
     position: absolute;
-    top: 530px;
+    top: 550px;
     left: 570px;
     text-shadow: 0 0 8px rgb(6, 6, 6);
     -webkit-text-stroke: 0.1px rgb(6, 6, 6);
+}
+#datos-curiosos:hover{
+  font-size: large;
 }
 
 #libros-de-la-saga {
     cursor: pointer;
     transform: rotate(-90deg); 
     position: absolute;
-    top: 500px;
+    top: 510px;
     left: 655px;
     text-shadow: 0 0 4px rgb(6, 6, 6);
     -webkit-text-stroke: 0.1px rgb(6, 6, 6);
+}
+#libros-de-la-saga:hover{
+  font-size: large;
 }
 
 #pocimas{
     cursor: pointer;
     transform: rotate(-97deg);    
-    font-size: smaller;
     position: absolute;
     top: 568px;
-    left: 828px;
+    left: 810px;
     text-shadow: 0 0 4px rgb(6, 6, 6);
     -webkit-text-stroke: 0.1px rgb(6, 6, 6);
+}
+#pocimas:hover{
+  font-size: large;
 }
 
 #characters{
@@ -163,6 +180,7 @@ aside {
   background-color:rgba(128, 128, 128, 0.455);
   font-size: small;
   padding: 1%;
+  
 }
 
 #j-k-rowling {
@@ -171,6 +189,9 @@ aside {
   padding: 8%;
   
 } 
+#titulo-characters{
+  
+}
 /*
 body {
   background-image: url(wallpaper.png);
