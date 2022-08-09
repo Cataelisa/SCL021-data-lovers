@@ -18,6 +18,10 @@ body {
     text-align: center;
 }
 
+header, main{
+    text-align: center;
+}
+
 img {
     max-width: 100%;
     height: auto; 
@@ -229,10 +233,6 @@ img {
   #menu>li:hover>ul {
     display:block;
   }
-
-header{
-    text-align: center;
-}
 
 aside {
     width: 20%;
