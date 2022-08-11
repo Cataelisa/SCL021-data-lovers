@@ -1,13 +1,14 @@
 body {
     background-image: url(wallpaper.png);
-    margin: 3rem 0 0 0;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-color: black;
+    font-family: fantasy;
+    color: whitesmoke
 }
 
-.contenedor {
+.front-page {
     max-width: 100%;
     height: auto;
 }
@@ -16,6 +17,7 @@ body {
     position: relative;
     display: inline-block;
     text-align: center;
+    margin: 3rem 0 0 0;
 }
 
 header, main{
@@ -95,8 +97,12 @@ img {
     position: relative;
     bottom: 32vw;
     right: 24vw;
-    font-size: 2vh;
+    /*background-color: red;
+    float: right;*/
 }
+#personajes:hover{
+    font-size: large;
+  } 
 
 #hechizos {
     cursor: pointer;
@@ -110,6 +116,9 @@ img {
     right: 14vw;
     font-size: 2vh;
 }
+#hechizos:hover{
+    font-size: large;
+  } 
 
 #datos-curiosos{
     cursor: pointer;
@@ -123,6 +132,9 @@ img {
     right: 4.3vw;
     font-size: 1.7vh;
 }
+#datos-curiosos:hover{
+    font-size: large;
+  } 
 
 #libros-de-la-saga {
     cursor: pointer;
@@ -136,6 +148,9 @@ img {
     left: 6vw;
     font-size: 1.7vh;
 }
+#libros-de-la-saga:hover{
+    font-size: large;
+  } 
 
 #pocimas{
     cursor: pointer;
@@ -149,6 +164,9 @@ img {
     left: 16vw;
     font-size: 2vh;
 }
+#pocimas:hover{
+    font-size: large;
+  } 
 
 @media only screen and (min-width: 640px) {
     #personajes {
@@ -234,7 +252,12 @@ img {
     display:block;
   }
 
+#titulo-characters { 
+    text-align: center;
+}
+
 aside {
+    margin: 3rem;
     width: 20%;
     background-color: rgba(128, 128, 128, 0.455);
     font-size: small;
@@ -245,5 +268,11 @@ aside {
   width: 75%;
   height: 85%;
   padding: 8%;
-  
 } 
+
+.main{
+    width: 70%;
+    padding: 20px;
+    float: right;
+    box-sizing: border-box;
+}
