@@ -1,30 +1,27 @@
 body {
     background-image: url(wallpaper.png);
-    margin: 3rem 0 0 0;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-color: black;
+    font-family: fantasy;
+    color: whitesmoke;
 }
 
-.contenedor {
+.front-page {
     max-width: 100%;
     height: auto;
 }
 
 #encabezado {
+    margin-top: 3.5rem;
     position: relative;
     display: inline-block;
     text-align: center;
 }
 
-header, main{
+#books-and-its-titles{
     text-align: center;
-}
-
-img {
-    max-width: 100%;
-    height: auto; 
 }
 
 #titulo-harry-potter {
@@ -47,7 +44,7 @@ img {
     height: 25%;
     font-family: fantasy;
     color: whitesmoke;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 0.4px black;
 }
 
 #titulo-elige-libro{
@@ -55,7 +52,7 @@ img {
     height: 25%;
     font-family: fantasy;
     color: whitesmoke;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 0.4px black;
 }
 
 @media only screen and (min-width: 640px) {
@@ -74,88 +71,106 @@ img {
     }
     
     #small-title{
-        font-size: 0.9rem;
+        font-size: 1rem;
         width: 65%;
         height: 15%;
+        margin-left: 5%;
     }
     
     #titulo-elige-libro{
-        font-size: 1.5rem;
+        font-size: 1.9rem;
         height: 15%;
     }
 }
 
-#personajes {
+#personajes{
     cursor: pointer;
     font-family: fantasy;
     color: seashell;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
     transform: rotate(-92deg);
     position: relative;
     bottom: 32vw;
     right: 24vw;
     font-size: 2vh;
+    padding: 15px;
 }
+
+/*#personajes:hover{
+  font-size: large;
+}*/
 
 #hechizos {
     cursor: pointer;
     font-family: fantasy;
     color: seashell;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
     transform: rotate(-92deg);
     position: relative;
     bottom: 30vw;
     right: 14vw;
     font-size: 2vh;
 }
+/*#hechizos:hover{
+  font-size: large;
+}*/
 
 #datos-curiosos{
     cursor: pointer;
     font-family: fantasy;
     color: seashell;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
     transform: rotate(-90deg);
     position: relative;
     bottom: 37vw;
     right: 4.3vw;
     font-size: 1.7vh;
 }
+/*#datos-curiosos:hover{
+  font-size: large;
+}*/
 
 #libros-de-la-saga {
     cursor: pointer;
     font-family: fantasy;
     color: seashell;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
     transform: rotate(-90deg);
     position: relative;
     bottom: 46vw;
     left: 6vw;
     font-size: 1.7vh;
 }
+/*#libros-de-la-saga:hover{
+  font-size: large;
+}*/
 
 #pocimas{
     cursor: pointer;
     font-family: fantasy;
     color: seashell;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
     transform: rotate(-98deg);
     position: relative;
     bottom: 42vw;
     left: 16vw;
     font-size: 2vh;
 }
+/*#pocimas:hover{
+  font-size: large;
+}*/
 
 @media only screen and (min-width: 640px) {
     #personajes {
         position: relative;
         bottom: 16vw;
         right: 12vw;
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 
     #hechizos {
@@ -189,6 +204,7 @@ img {
 
 #characters{
     display: none;
+ 
 }
    
 *{
@@ -200,7 +216,7 @@ img {
     text-shadow: 0 0 2px rgb(6, 6, 6);
     width: 100%;
     margin: 0 auto;
-    position: fixed;
+   position: fixed;
   }
 
   ul{
@@ -233,17 +249,23 @@ img {
   #menu>li:hover>ul {
     display:block;
   }
-
+  
 aside {
     width: 20%;
+    margin-left: 2rem;
     background-color: rgba(128, 128, 128, 0.455);
     font-size: small;
     padding: 1%;
 }
 
 #j-k-rowling {
-  width: 75%;
-  height: 85%;
-  padding: 8%;
+  width: 80%;
+}
   
-} 
+
+
+.section-characters {
+  display: flex;
+  margin-top: 3em;
+
+}

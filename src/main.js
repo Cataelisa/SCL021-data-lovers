@@ -1,8 +1,8 @@
-//import { example } from "./data.js";
 
-//import data from "./data/harrypotter/data.js";
+import data from "./data/harrypotter/harry.js";
+import { example } from "./data.js";
+console.log(data.characters[49]);
 
-//console.log(example, data);
 
 function goToCharacters() {
   // show the  characters
@@ -17,3 +17,5 @@ function goToCharacters() {
 //go to characters
 let showCharacters = document.getElementById("personajes");
 showCharacters.addEventListener("click", goToCharacters);
+
+
