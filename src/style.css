@@ -3,150 +3,226 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
+    background-color: black;
     font-family: fantasy;
     color: whitesmoke;
-    border-color: black;
-    /*max-width: 100%;
-    height: auto; */
 }
-/*
-.contenedor {
-  max-width: 100%;
-  height: auto;
-  text-align: center;
-  overflow-y: hidden;
-  display: flex;
-}*/
+
+.front-page {
+    max-width: 100%;
+    height: auto;
+}
 
 #encabezado {
-   top: 15px;
+    margin-top: 3.5rem;
     position: relative;
     display: inline-block;
     text-align: center;
 }
 
-#small-title{
-    position: absolute;
-    top: 20px;
-    left: 350px;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
-    -webkit-text-stroke: 0.5px rgb(6, 6, 6);
+#books-and-its-titles{
+    text-align: center;
 }
 
 #titulo-harry-potter {
-    text-align: center;
-    margin-top: 35px;
-    margin-left: 330px;
-    width: 750px;
-    height: 220px;
-    /*max-width: 100%;
-    height: auto;*/
+    width: 90%;
+    height: 25%;
+    justify-self: center;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
 }
 
-#titulo-elige-libro {
-    position: absolute;
-    top: 258px;
-    left: 540px;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
-    -webkit-text-stroke: 0.5px rgb(6, 6, 6);
+#books {
+    width: 60%;
+    height: 50%;
+    margin-top: 3vh;
 }
 
-.books {
-    margin-left: 450px;
-    margin-top: 40px;
-    width: 550px;
-    height: 450px;
-    position:relative;
+#small-title{
+    font-size: 0.6rem;
+    width: 50%;
+    height: 25%;
+    font-family: fantasy;
+    color: whitesmoke;
+    -webkit-text-stroke: 0.4px black;
+}
+
+#titulo-elige-libro{
+    font-size: 1.2rem;
+    height: 25%;
+    font-family: fantasy;
+    color: whitesmoke;
+    -webkit-text-stroke: 0.4px black;
+}
+
+@media only screen and (min-width: 640px) {
+    #titulo-harry-potter {
+        width: 55%;
+        height: 15%;
+        justify-self: center;
+        margin-bottom: -3vh;
+        margin-top: -3vh;
+    }
+    
+    #books {
+        width: 30%;
+        height: 40%;
+        margin-top: 2vh;
+    }
+    
+    #small-title{
+        font-size: 1rem;
+        width: 65%;
+        height: 15%;
+        margin-left: 5%;
+    }
+    
+    #titulo-elige-libro{
+        font-size: 1.9rem;
+        height: 15%;
+    }
 }
 
 #personajes{
     cursor: pointer;
-    transform: rotate(-90deg); 
-    width: 100px;
-    position: absolute;
-    top: 566px;
-    left: 460px;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
-    -webkit-text-stroke: 0.1px rgb(6, 6, 6);
+    font-family: fantasy;
     color: seashell;
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
+    transform: rotate(-92deg);
+    position: relative;
+    bottom: 32vw;
+    right: 24vw;
+    font-size: 2vh;
+    padding: 15px;
 }
-#personajes:hover{
-    font-size: large;
-}
+
+/*#personajes:hover{
+  font-size: large;
+}*/
 
 #hechizos {
     cursor: pointer;
-    transform: rotate(-92deg);     
-    width: 100px;
-    position: absolute;
-    top: 580px;
-    left: 558px;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
-    -webkit-text-stroke: 0.1px rgb(6, 6, 6);
+    font-family: fantasy;
+    color: seashell;
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
+    transform: rotate(-92deg);
+    position: relative;
+    bottom: 30vw;
+    right: 14vw;
+    font-size: 2vh;
 }
-#hechizos:hover{
+/*#hechizos:hover{
   font-size: large;
-}
+}*/
 
 #datos-curiosos{
     cursor: pointer;
-    transform: rotate(-90deg);    
-    position: absolute;
-    top: 550px;
-    left: 570px;
-    text-shadow: 0 0 8px rgb(6, 6, 6);
-    -webkit-text-stroke: 0.1px rgb(6, 6, 6);
+    font-family: fantasy;
+    color: seashell;
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
+    transform: rotate(-90deg);
+    position: relative;
+    bottom: 37vw;
+    right: 4.3vw;
+    font-size: 1.7vh;
 }
-#datos-curiosos:hover{
+/*#datos-curiosos:hover{
   font-size: large;
-}
+}*/
 
 #libros-de-la-saga {
     cursor: pointer;
-    transform: rotate(-90deg); 
-    position: absolute;
-    top: 510px;
-    left: 655px;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
-    -webkit-text-stroke: 0.1px rgb(6, 6, 6);
+    font-family: fantasy;
+    color: seashell;
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
+    transform: rotate(-90deg);
+    position: relative;
+    bottom: 46vw;
+    left: 6vw;
+    font-size: 1.7vh;
 }
-#libros-de-la-saga:hover{
+/*#libros-de-la-saga:hover{
   font-size: large;
-}
+}*/
 
 #pocimas{
     cursor: pointer;
-    transform: rotate(-97deg);    
-    position: absolute;
-    top: 568px;
-    left: 810px;
-    text-shadow: 0 0 4px rgb(6, 6, 6);
-    -webkit-text-stroke: 0.1px rgb(6, 6, 6);
+    font-family: fantasy;
+    color: seashell;
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 0 0 3px rgb(6, 6, 6);
+    transform: rotate(-98deg);
+    position: relative;
+    bottom: 42vw;
+    left: 16vw;
+    font-size: 2vh;
 }
-#pocimas:hover{
+/*#pocimas:hover{
   font-size: large;
+}*/
+
+@media only screen and (min-width: 640px) {
+    #personajes {
+        position: relative;
+        bottom: 16vw;
+        right: 12vw;
+        font-size: 2vh;
+    }
+
+    #hechizos {
+        position: relative;
+        bottom: 17vw;
+        right: 7vw;
+        font-size: 2.5vh;
+    }
+    
+    #datos-curiosos{
+        position: relative;
+        bottom: 20vw;
+        right: 2.5vw;
+        font-size: 2vh;
+    }
+    
+    #libros-de-la-saga {
+        position: relative;
+        bottom: 25vw;
+        left: 3vw;
+        font-size: 2vh;
+    }
+    
+    #pocimas{
+        position: relative;
+        bottom: 21vw;
+        left: 7.5vw;
+        font-size: 2vh;
+    }
 }
 
 #characters{
- display: none;
+    display: none;
+ 
 }
-
+   
 *{
     margin: 0;
     padding: 0;
-  }
+}
+
   #barra-de-menu{
     text-shadow: 0 0 2px rgb(6, 6, 6);
     width: 100%;
     margin: 0 auto;
-    position: fixed;
+   position: fixed;
   }
+
   ul{
     list-style: none;
   }
+
   #menu li>a{
     background-color: rgba(128, 128, 128, 0.455);
     color: white;
@@ -155,208 +231,41 @@ body {
     text-decoration: none;
     min-width: 257px;
   }
+
   #menu li>a:hover{
     color: black;
     background-color: #eaeaea;
   }
+
   #menu>li{
     float: left;
     text-align:center
   }
-  
-  #menu>li>ul{
-  display: none;
+     
+#menu>li>ul{
+    display: none;
   }
+
   #menu>li:hover>ul {
-  display:block;
-}
-
-header{
-  text-align: center;
-}
-
-aside {
-  width: 20%;
-  background-color:rgba(128, 128, 128, 0.455);
-  font-size: small;
-  padding: 1%;
+    display:block;
+  }
   
+aside {
+    width: 20%;
+    margin-left: 2rem;
+    background-color: rgba(128, 128, 128, 0.455);
+    font-size: small;
+    padding: 1%;
 }
 
 #j-k-rowling {
-  width: 75%;
-  height: 85%;
-  padding: 8%;
+  width: 80%;
+}
   
-} 
-#titulo-characters{
-  
-}
-/*
-body {
-  background-image: url(wallpaper.png);
-  margin: 3rem 0 0 0;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-color: black;
-}
 
-.contenedor {
-  max-width: 100%;
-  height: auto;
-  text-align: center;
-  overflow-y: hidden;
-}
 
-img {
-  max-width: 100%;
-  height: auto; 
-}
+.section-characters {
+  display: flex;
+  margin-top: 3em;
 
-#titulo-harry-potter {
-  width: 90%;
-  height: 25%;
-  justify-self: center;
-  margin-bottom: 3vh;
-  margin-top: 3vh;
 }
-
-#books {
-  width: 60%;
-  height: 50%;
-  margin-top: 3vh;
-}
-
-#small-title{
-  font-size: 0.6rem;
-  width: 50%;
-  height: 25%;
-  font-family: fantasy;
-  color: whitesmoke;
-  -webkit-text-stroke: 1px black;
-}
-
-#titulo-elige-libro{
-  font-size: 1.2rem;
-  height: 25%;
-  font-family: fantasy;
-  color: whitesmoke;
-  -webkit-text-stroke: 1px black;
-}
-
-@media only screen and (min-width: 640px) {
-  #titulo-harry-potter {
-      width: 45%;
-      height: 15%;
-      justify-self: center;
-  }
-
-  #books {
-    width: 30%;
-    height: 40%;
-}
-
-#small-title{
-    font-size: 0.7rem;
-    width: 55%;
-    height: 15%;
-}
-
-#titulo-elige-libro{
-    font-size: 1.1rem;
-    height: 15%;
-}
-}
-
-#personajes {
-color: seashell;
--webkit-text-stroke: 1px black;
-text-shadow: 0 0 4px rgb(6, 6, 6);
-transform: rotate(-92deg);
-position: relative;
-top: -33vw;
-left: -24vw;
-font-size: 1.5vh;
-}
-
-#hechizos {
-color: seashell;
--webkit-text-stroke: 1px black;
-text-shadow: 0 0 4px rgb(6, 6, 6);
-transform: rotate(-92deg);
-position: relative;
-top: -37vw;
-left: -14vw;
-font-size: 1.5vh;
-}
-
-#datos-curiosos{
-color: seashell;
--webkit-text-stroke: 1px black;
-text-shadow: 0 0 4px rgb(6, 6, 6);
-transform: rotate(-90deg);
-position: relative;
-top: -47vw;
-left: -4.3vw;
-font-size: 1.2vh;
-}
-
-#libros-de-la-saga {
-color: seashell;
--webkit-text-stroke: 1px black;
-text-shadow: 0 0 4px rgb(6, 6, 6);
-transform: rotate(-90deg);
-position: relative;
-top: -58vw;
-left: 6vw;
-font-size: 1.2vh;
-}
-
-#pocimas{
-color: seashell;
--webkit-text-stroke: 1px black;
-text-shadow: 0 0 4px rgb(6, 6, 6);
-transform: rotate(-98deg);
-position: relative;
-top: -55vw;
-left: 16vw;
-font-size: 1.5vh;
-}
-
-@media only screen and (min-width: 640px) {
-#personajes {
-    position: relative;
-    top: -17vw;
-    left: -11.5vw;
-    font-size: 3vh;
-}
-
-#hechizos {
-    position: relative;
-    top: -22vw;
-    left: -6.5vw;
-    font-size: 3vh;
-}
-
-#datos-curiosos{
-    position: relative;
-    top: -29vw;
-    left: -2vw;
-    font-size: 2vh;
-}
-
-#libros-de-la-saga {
-    position: relative;
-    top: -36vw;
-    left: 3vw;
-    font-size: 2vh;
-}
-
-#pocimas{
-    position: relative;
-    top: -38vw;
-    left: 7.5vw;
-    font-size: 3vh;
-}
-}*/
