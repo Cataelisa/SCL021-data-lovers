@@ -263,7 +263,9 @@ aside {
   width: 80%;
 }
   
-
+main {
+  margin-top: 10%;
+}
 
 .section-characters {
   display: flex;
