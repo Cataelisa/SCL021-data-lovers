@@ -1,12 +1,4 @@
-//Filtar por la casa Griyffindor
-//Filtar por la casa Hufflepuff
-//Filtar por la casa Ravenclaw
-//Filtar por la casa Slytherin
-
-const filterHouse = (characters, house) => {
-  return characters.filter((character) => character.house === house);
-};
-
+//filter to show all the characters
 //Filtrar por Muggle
 //Filtrar por Sangre pura
 //Filtrar por Hombre
@@ -15,4 +7,10 @@ const filterHouse = (characters, house) => {
 //Ordenar por Z - A
 //Ordenar por Menor a mayor
 
-export { filterHouse };
+// Filtrar por casa
+export const filterData = (data, condition) => {
+  const filterAllCharacters = data.filter((element) => {
+    return element.house === condition;
+  });
+  return filterAllCharacters;
+};

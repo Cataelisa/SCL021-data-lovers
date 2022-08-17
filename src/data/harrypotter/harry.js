@@ -16170,6 +16170,7 @@ export default {
   books: [
     {
       "id": 1,
+      "photo": ".data/harrypotter/images/books/hp1.jpg",
       "title": "Harry Potter and the Sorcerer's Stone",
       "releaseDay": "June 26, 1997",
       "author": "J. K. Rowling",
@@ -16177,6 +16178,7 @@ export default {
     },
     {
       "id": 2,
+      "photo": "./data/harrypotter/images/books/hp2.jpg",
       "title": "Harry Potter and the chamber of secrets",
       "releaseDay": "July 2, 1998",
       "author": "J. K. Rowling",
@@ -16184,6 +16186,7 @@ export default {
     },
     {
       "id": 3,
+      "photo": "./data/harrypotter/images/books/hp3.jpg",
       "title": "Harry Potter and the Prisoner of Azkaban",
       "releseDay": "July 8, 1999",
       "author": "J. K. Rowling",
@@ -16191,6 +16194,7 @@ export default {
     },
     {
       "id": 4,
+      "photo": "./data/harrypotter/images/books/hp4.jpg",
       "title": "Harry Potter and the Goblet of Fire",
       "releaseDay": "July 8, 2000",
       "author": "J. K. Rowling",
@@ -16198,6 +16202,7 @@ export default {
     },
     {
       "id": 5,
+      "photo": "./data/harrypotter/images/books/hp5.jpg",
       "title": "Harry Potter and the Order of the Phoenix",
       "releaseDay": "June 21, 2003",
       "author": "J. K. Rowling",
@@ -16205,6 +16210,7 @@ export default {
     },
     {
       "id": 6,
+      "photo": "./data/harrypotter/images/books/hp6.jpg",
       "title": "Harry Potter and the Half-Blood Prince",
       "releaseDay": "July 16, 2005",
       "author": "J. K. Rowling",
@@ -16212,6 +16218,7 @@ export default {
     },
     {
       "id": 7,
+      "photo": "./data/harrypotter/images/books/hp7.jpg",
       "title": "Harry Potter and the Deathly Hallows",
       "releaseDay": "July 21, 2007",
       "author": "J. K. Rowling",
@@ -16219,6 +16226,7 @@ export default {
     },
     {
       "id": 8,
+      "photo": "/data/harrypotter/images/books/hp8.jpg",
       "title": "Harry Potter and the Cursed Child",
       "releaseDay": "July 30, 2016",
       "author": "J. K. Rowling",
@@ -16228,6 +16236,7 @@ export default {
   mainCharacters: [
     {
       "id": 1,
+      "photo": "./data/harrypotter/images/Harry-Potter.png",
       "name": "Harry Potter",
       "birth": "31 July, 1980",
       "death": null,
@@ -16259,6 +16268,7 @@ export default {
    
     {
       "id": 2,
+      "photo": "./data/harrypotter/images/hermaione.png",
       "name": "Hermione Granger",
       "birth": "19 September, 1979",
       "death": null,
@@ -16289,6 +16299,7 @@ export default {
     
     {
       "id": 3,
+      "photo": "./data/harrypotter/images/Ron_Weasley.png",
       "name": "Ronald Weasley",
       "birth": "1 March, 1980",
       "death": null,
@@ -16321,6 +16332,7 @@ export default {
 
     {
       "id": 4,
+      "photo": "./data/harrypotter/images/draco-malfoy.png",
       "name": "Draco Malfoy",
       "birth": "5 June, 1980",
       "death": null,
@@ -16338,6 +16350,7 @@ export default {
 
     {
       "id": 5,
+      "photo": "./data/harrypotter/images/Dobby.png",
       "name": "Dobby",
       "birth": "28 June, unknown year",
       "death": "Late March, 1998",
@@ -16364,6 +16377,7 @@ export default {
 
     {
       "id": 6,
+      "photo": "./data/harrypotter/images/dombuldore.jpg.png",
       "name": "Albus Dumbledore",
       "birth": "Late August 1881",
       "death": "30 June, 1997 (aged 115)",
@@ -16394,6 +16408,7 @@ export default {
 
     {
       "id": 7,
+      "photo": "./data/harrypotter/images/ginny-weasley.png",
       "name": "Ginny Weasley",
       "birth": "11 August, 1981",
       "death": null,
@@ -16423,6 +16438,7 @@ export default {
     
     {
       "id": 8,
+      "photo": "./data/harrypotter/images/minerva.png",
       "name": "Minerva McGonagall",
       "birth": "4 October,",
       "death": null,
@@ -16452,6 +16468,7 @@ export default {
     
     {
       "id": 9,
+      "photo": "./data/harrypotter/images/luna lovegood.png",
       "name": "Luna Lovegood",
       "birth": "13 February, 1981",
       "death": null,
@@ -16477,23 +16494,32 @@ export default {
 
     {
       "id": 10,
-      "name": "Bellatrix Lestrange",
-      "birth": "1951",
-      "death": "2 May, 1998 (aged 46 - 47)",
+      "photo": "./data/harrypotter/images/serius-black.png",
+      "name": "Sirius Black",
+      "birth": "3 November, 1959",
+      "death": "18 June, 1996 (aged 36)",
       "species": "Human",
       "ancestry": "Pure-blood",
-      "gender": "Female",
+      "gender": "Male",
       "hair_color": "Black",
-      "eye_color": null,
-      "wand": "12¾\", Walnut, dragon heartstring",
-      "patronus": "None",
-      "house": "House of Black",
-      "associated_groups": [],
-      "books_featured_in": [4, 5, 6, 7]
+      "eye_color": "Grey",
+      "wand": "Unknown length, wood and core",
+      "patronus": "Non-corporeal",
+      "house": "Gryffindor",
+      "associated_groups": [
+        "Black family (formerly)",
+        "Potter family",
+        "Hogwarts School of Witchcraft and Wizardry",
+        "Gryffindor",
+        "Marauders",
+        "Order of the Phoenix"
+      ],
+      "books_featured_in": [1, 3, 4, 5, 6, 7]
     },
 
     {
       "id": 11,
+      "photo": "./data/harrypotter/images/hedwig.png",
       "name": "Hedwig",
       "birth": "Pre 1991",
       "death": "27 July, 1997",
@@ -16511,6 +16537,7 @@ export default {
 
     {
       "id": 12,
+      "photo": "./data/harrypotter/images/severus-snape.png",
       "name": "Severus Snape",
       "birth": "9 January 1960",
       "death": "2 May 1998 (aged 38)",
@@ -16539,6 +16566,7 @@ export default {
 
     {
       "id": 13,
+      "photo": "./data/harrypotter/images/tom-riddle.png",
       "name": "Tom Riddle (Voldemort)",
       "birth": "31 December, 1926",
       "death": "2 May, 1998 (aged 71)",
@@ -16563,6 +16591,7 @@ export default {
 
     {
       "id": 14,
+      "photo": "./data/harrypotter/images/lucius malfoy.png",
       "name": "Lucius Malfoy",
       "birth": "between 9 September 1953 and 8 September 1954",
       "death": null,
@@ -16580,6 +16609,7 @@ export default {
 
     {
       "id": 15,
+      "photo": "./data/harrypotter/images/neville.png",
       "name": "Neville Longbottom",
       "birth": "30 July, 1980",
       "death": null,
@@ -16611,6 +16641,7 @@ export default {
 
     {
       "id": 16,
+      "photo": "./data/harrypotter/images/hagrid.png",
       "name": "Rubeus Hagrid",
       "birth": "6 December 1928",
       "death": null,
@@ -16633,28 +16664,23 @@ export default {
       "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
     },
 
+    
     {
       "id": 17,
-      "name": "Sirius Black",
-      "birth": "3 November, 1959",
-      "death": "18 June, 1996 (aged 36)",
+      "photo": "./data/harrypotter/images/Bellatrix-Lestrange.png",
+      "name": "Bellatrix Lestrange",
+      "birth": "1951",
+      "death": "2 May, 1998 (aged 46 - 47)",
       "species": "Human",
       "ancestry": "Pure-blood",
-      "gender": "Male",
+      "gender": "Female",
       "hair_color": "Black",
-      "eye_color": "Grey",
-      "wand": "Unknown length, wood and core",
-      "patronus": "Non-corporeal",
-      "house": "Gryffindor",
-      "associated_groups": [
-        "Black family (formerly)",
-        "Potter family",
-        "Hogwarts School of Witchcraft and Wizardry",
-        "Gryffindor",
-        "Marauders",
-        "Order of the Phoenix"
-      ],
-      "books_featured_in": [1, 3, 4, 5, 6, 7]
+      "eye_color": null,
+      "wand": "12¾\", Walnut, dragon heartstring",
+      "patronus": "None",
+      "house": "House of Black",
+      "associated_groups": [],
+      "books_featured_in": [4, 5, 6, 7]
     }
 
   ]
