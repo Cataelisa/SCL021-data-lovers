@@ -8,8 +8,11 @@
   </head>
 
   <body>
-    
+<!-- Página de inicio -->
       <div id="front-page">
+        <audio class="audio" controls autoplay loop>
+          <source src="Harry-Potter-Theme-Song.mp3" type="audio/mpeg" />
+        </audio>
         <header id="encabezado">
           <div id="small-title"><h1>Averigua todo sobre</h1></div>
           <img src="Harry-Potter-Logo-PNG-Transparent-Image.png" id="titulo-harry-potter"/>
@@ -17,118 +20,144 @@
 
         <main id="books-and-its-titles">
           <h1 id="titulo-elige-libro">Elige el libro que quieras:</h1>
-          <img src="Books.png" id="books" />
-          <div id="personajes"><h2>PERSONAJES</h2></div>
-          <div id="hechizos"><h2>HECHIZOS</h2></div>
-          <div id="datos-curiosos"><h2>DATOS CURIOSOS</h2></div>
-          <div id="libros-de-la-saga"><h2>LIBROS DE LA SAGA</h2></div>
-          <div id="pocimas"><h2>PÓCIMAS</h2></div>
+          <div>
+              <img src="Books.png" id="books-front-page" />
+              <div id="personajes">PERSONAJES</h2></div>
+              <div id="hechizos"><h2>HECHIZOS</h2></div>
+              <div id="datos-curiosos"><h2>DATOS CURIOSOS</h2></div>
+              <div id="libros-de-la-saga"><h2>LIBROS DE LA SAGA</h2></div>
+              <div id="pocimas"><h2>PÓCIMAS</h2></div>
+          </div>
         </main>
-        <footer>
-          <audio class="audio" controls autoplay>
-            <source src="Harry-Potter-Theme-Song.mp3" type="audio/mpeg" />
-          </audio>
-        </footer>
       </div>
 
+<!-- menú de navegación (Segunda página)-->
       <div id="characters">
-        <nav id="barra-de-menu">
-          <ul id="menu">
-            <li><a href="">PERSONAJES</a></li>
-            <li>
-              <a href="">HECHIZOS</a>
-              <ul>
-                <li><a href="">Transformación</a></li>
-                <li><a href="">Encantamiento</a></li>
-                <li><a href="">Embrujo</a></li>
-                <li><a href="">Maleficio</a></li>
-                <li><a href="">Maldición</a></li>
-                <li><a href="">Curación</a></li>
-                <li><a href="">Contrahechizos</a></li>
-              </ul>
-            </li>
-            <li><a href="">DATOS CURIOSOS</a></li>
-            <li><a href="">LIBROS DE LA SAGA</a></li>
-            <li>
-              <a href="">PÓCIMAS</a>
-              <ul>
-                <li><a href="">Medicinales</a></li>
-                <li><a href="">Letales</a></li>
-                <li><a href="">De cualidades</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <section class="section-characters">
-        <aside>
-          <img src="jk_rowling.png" id="j-k-rowling" />
-          <h3>Sobre la escritora:</h3>
-          <br />
-          <p>
-            El auténtico nombre de J. K. Rowling es Joanne Rowling. Nació el 31
-            de julio de 1965 en Yate (Reino Unido). Trabajó en Oporto (Portugal)
-            como profesora de inglés. Más tarde se trasladó con su hija a
-            Edimburgo (Escocia), y al encontrarse sin empleo, comenzó la
-            escritura de la primera entrega de Harry Potter. La idea inicial de
-            escribir Harry Potter le surgió mientras viajaba en un tren desde
-            Manchester hasta Londres. Después, el proceso de escritura lo
-            desarrolló en varias cafeterías que frecuentaba, mientras
-            aprovechaba el rato en que su hija dormía. El primer libro lO
-            concluyó en 1995 y el título que escogió fue "Harry Potter y la
-            piedra filosofal". Joanne encontró pronto representante pero tardó
-            mucho en conseguir que fuera publicado: el libro fue rechazado por
-            ¡doce! editoriales hasta que cayó en manos de Bloomsbury, una
-            pequeña editorial londinense que aceptó a publicarlo, aunque con
-            pocas esperanzas de conseguir con ello una gran inversión. Colocó
-            las iniciales J. K. antes de su apellido en lugar de Joanne debido a
-            una sugerencia de la editorial que publicó su primera novela, que
-            creía que los chicos que leyeran el libro preferirían que hubiera
-            sido escrito por un hombre. La letra K de su seudónimo la escogió
-            por Kathleen, el nombre de su abuela. Al éxito del primero le
-            siguieron seis entregas más J. K. Rowling recibió multitud de
-            premios por su obra: el Premio del Libro Británico en la categoría
-            Libro Infantil del Año, el Premio al Mejor Libro Infantil (que
-            recibió en varias ocasiones) y fue nombrada escritora del año en los
-            Premios Británicos de 2000, además de recibir otros títulos. Su obra
-            ha significado un éxito sin precedentes en el ámbito de la
-            literatura infantil, batiendo todos los records de ventas en su
-            campo. También se han rodado varias películas basadas en los libros.
-          </p>
-        </aside>
-        <main>
-          <h1 id="titulo-characters">PERSONAJES</h1>
-          <label>Filtrar:</label>
-          <select>
-              <option>Selecciona opción</option>
-              <option>Gryffindor</option>
-              <option>Hufflepuff</option>
-              <option>Ravenclaw</option>
-              <option>Slytherin</option>
-              <option>Muggle</option>
-              <option>Sangre pura</option>
-              <option>Mujeres</option>
-              <option>Hombres</option>
-          </select>
-         
-          <label>Ordenar por:</label>
-          <select>
-              <option>Selecciona opción</option>
-              <option>A - Z</option>
-              <option>Z - A</option>
+        <section class="section-menu-aside">      
+          <nav id="barra-de-menu">
+            <ul id="menu">
+              <li><a href="">PERSONAJES</a></li>
+              <li>
+                <a href="">HECHIZOS</a>
+                <ul>
+                  <li><a href="">Transformación</a></li>
+                  <li><a href="">Encantamiento</a></li>
+                  <li><a href="">Embrujo</a></li>
+                  <li><a href="">Maleficio</a></li>
+                  <li><a href="">Maldición</a></li>
+                  <li><a href="">Curación</a></li>
+                  <li><a href="">Contrahechizos</a></li>
+                </ul>
+              </li>
+              <li><a href="">DATOS CURIOSOS</a></li>
+              <li><a href="">LIBROS DE LA SAGA</a></li>
+              <li>
+                <a href="">PÓCIMAS</a>
+                <ul>
+                  <li><a href="">Medicinales</a></li>
+                  <li><a href="">Letales</a></li>
+                  <li><a href="">De cualidades</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          
+          <aside>
+            <img src="jk_rowling.png" id="j-k-rowling"/>
+            <h3>Sobre la escritora:</h3>
+            <br />
+            <p>
+              El auténtico nombre de J. K. Rowling es Joanne Rowling. Nació el 31
+              de julio de 1965 en Yate (Reino Unido). Trabajó en Oporto (Portugal)
+              como profesora de inglés. Más tarde se trasladó con su hija a
+              Edimburgo (Escocia), y al encontrarse sin empleo, comenzó la
+              escritura de la primera entrega de Harry Potter. 
+            </p>
+            <p>
+              La idea inicial de escribir Harry Potter le surgió mientras viajaba en un tren desde
+              Manchester hasta Londres. Después, el proceso de escritura lo
+              desarrolló en varias cafeterías que frecuentaba, mientras
+              aprovechaba el rato en que su hija dormía. El primer libro lO
+              concluyó en 1995 y el título que escogió fue "Harry Potter y la
+              piedra filosofal". 
+            </p>
+            <p>
+              Joanne encontró pronto representante pero tardó
+              mucho en conseguir que fuera publicado: el libro fue rechazado por
+              ¡doce! editoriales hasta que cayó en manos de Bloomsbury, una
+              pequeña editorial londinense que aceptó a publicarlo, aunque con
+              pocas esperanzas de conseguir con ello una gran inversión. 
+            </p>
+            <p>
+              Colocó las iniciales J. K. antes de su apellido en lugar de Joanne debido a
+              una sugerencia de la editorial que publicó su primera novela, que
+              creía que los chicos que leyeran el libro preferirían que hubiera
+              sido escrito por un hombre. La letra K de su seudónimo la escogió
+              por Kathleen, el nombre de su abuela. 
+            </p>
+            <p>
+              Al éxito del primero le
+              siguieron seis entregas más J. K. Rowling recibió multitud de
+              premios por su obra: el Premio del Libro Británico en la categoría
+              Libro Infantil del Año, el Premio al Mejor Libro Infantil (que
+              recibió en varias ocasiones) y fue nombrada escritora del año en los
+              Premios Británicos de 2000, además de recibir otros títulos. Su obra
+              ha significado un éxito sin precedentes en el ámbito de la
+              literatura infantil, batiendo todos los records de ventas en su
+              campo. También se han rodado varias películas basadas en los libros.
+            </p>
+          </aside>
+        </section>
 
-          </select>
-    <div id="root"></div>
+        <!-- información dinámica (Segunda Página)-->
+       <main>
+          
+
+          <div id="filter-order"> 
+            
+            <h1 id="title-characters">PERSONAJES</h1> 
+            
+            <label class="lebels">Filtrar:</label> 
+            <select id="select-character">
+                <option>Selecciona opción</option>
+                <option value="Gryffindor">Gryffindor</option>
+                <option value="Hufflepuff">Hufflepuff</option>
+                <option value="Ravenclaw">Ravenclaw</option>
+                <option value="Slytherin">Slytherin</option>
+                <option value="Muggle">Muggle</option>
+                <option value="Pure-blood">Sangre pura</option>
+                <option value="Female">Mujeres</option>
+                <option value="Male">Hombres</option>
+                <option value="todos-los-personajes">Todos los personajes</option>
+            </select>
+           
+            <label class="lebels">Ordenar por:</label> 
+            <select>
+                <option>Selecciona opción</option>
+                <option>A - Z</option>
+                <option>Z - A</option>
+            </select>
+          
+          </div>
+            <div id="root">
+              <div class= "info-div" id="info-main-characters"></div>
+              <div class= "info-div" id="info-characters"></div>
+              <div class= "info-div" id="info-books"></div>
+              <div class= "info-div" id="info-spells"></div>
+              <div class= "info-div" id="info-fun-facts"></div>
+              <div class= "info-div" id="info-potions"></div>
+            </div>
+          
         </main>
+    </div>
 
-      </section>
-
-        <footer>
-
-        </footer>
-      </div>
-
-      
-      <script src="main.js" type="module"></script>
+<!-- Footer -->
+      <footer>
+        <h3 id="footerText">Ⓒ 2022 Ashley & Catalina | Laboratoria SCL021</h3> 
+      </footer>
     
+      <script src="main.js" type="module"></script>
+  
+
   </body>
 </html>

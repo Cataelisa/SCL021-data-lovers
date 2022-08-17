@@ -14,7 +14,7 @@ body {
 }
 
 #encabezado {
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
     position: relative;
     display: inline-block;
     text-align: center;
@@ -32,7 +32,7 @@ body {
     margin-top: 3vh;
 }
 
-#books {
+#books-front-page {
     width: 60%;
     height: 50%;
     margin-top: 3vh;
@@ -48,6 +48,7 @@ body {
 }
 
 #titulo-elige-libro{
+    margin-top: 1em;
     font-size: 1.2rem;
     height: 25%;
     font-family: fantasy;
@@ -64,7 +65,7 @@ body {
         margin-top: -3vh;
     }
     
-    #books {
+    #books-front-page {
         width: 30%;
         height: 40%;
         margin-top: 2vh;
@@ -216,7 +217,7 @@ body {
     text-shadow: 0 0 2px rgb(6, 6, 6);
     width: 100%;
     margin: 0 auto;
-   position: fixed;
+    position:fixed;
   }
 
   ul{
@@ -251,21 +252,88 @@ body {
   }
   
 aside {
-    width: 20%;
+    width: 22em;
+    height: 88em;
+    margin-top: 10em;
     margin-left: 2rem;
     background-color: rgba(128, 128, 128, 0.455);
     font-size: small;
     padding: 1%;
+    position: absolute;
+   
 }
 
 #j-k-rowling {
   width: 80%;
 }
   
-
-
-.section-characters {
+.section-menu-aside {
   display: flex;
-  margin-top: 3em;
+  align-content: space-around;
+  flex-flow: row wrap;
+}
 
+main{
+  margin-top: 3em;
+}
+
+#title-characters{
+  font-size: xx-large;
+  -webkit-text-stroke: 0.4px black;
+}
+
+#filter-order{
+  margin-top: 6em;
+  margin-left: 25em;
+  display: flex;
+  width: 58em;
+  justify-content: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1em;
+ align-items:center;
+ padding: 1px;
+  
+}
+.character {
+  width: 80%;
+  background: rgba(128, 128, 128, 0.491);
+}
+.cards {
+  width: 15em;
+  padding: 0,5%;
+}
+
+#root {
+  display: flex;
+  justify-content: space-around;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+ 
+
+}
+
+.info-div {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 75%;
+
+
+}
+footer{
+  text-align: center;
+  
+}
+
+.booksCovers {
+  width: 80%;
+  background: rgba(128, 128, 128, 0.491);
+}
+.book-cards {
+  width: 15em;
+  padding: 0,5%;
+}
+
+#libros {
+  display: none;
 }
