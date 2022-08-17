@@ -18,6 +18,7 @@ body {
     position: relative;
     display: inline-block;
     text-align: center;
+    margin: 3rem 0 0 0;
 }
 
 #books-and-its-titles{
@@ -97,10 +98,9 @@ body {
     font-size: 2vh;
     padding: 15px;
 }
-
-/*#personajes:hover{
-  font-size: large;
-}*/
+#personajes:hover{
+    font-size: large;
+  } 
 
 #hechizos {
     cursor: pointer;
@@ -250,7 +250,7 @@ body {
   #menu>li:hover>ul {
     display:block;
   }
-  
+
 aside {
     width: 22em;
     height: 88em;
