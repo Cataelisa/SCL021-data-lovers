@@ -9,8 +9,15 @@
 
 // Filtrar por casa
 export const filterData = (data, condition) => {
-  const filterAllCharacters = data.filter((element) => {
+  const filterByHouse = data.filter((element) => {
     return element.house === condition;
   });
-  return filterAllCharacters;
+  return filterByHouse;
+};
+
+export const filterGender = (data, condition) => {
+  const filterByGender = data.filter((element) => {
+    return element.gender === condition;
+  });
+  return filterByGender;
 };
