@@ -296,9 +296,10 @@ main{
  padding: 1px;
   
 }
-.character {
+.character{
   width: 80%;
   background: rgba(128, 128, 128, 0.491);
+  box-shadow: 0px 0px 6px 0px;
 }
 .cards {
   width: 15em;

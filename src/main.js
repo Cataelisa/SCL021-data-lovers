@@ -17,16 +17,6 @@ function goToCharacters() {
 let showCharacters = document.getElementById("personajes");
 showCharacters.addEventListener("click", goToCharacters);
 
-// Go to books
-function goToBooks() {
-  let books = document.getElementById("second-page");
-  books.style.display = "block";
-  let frontPage = document.getElementById("front-page");
-  frontPage.style.display = "none";
-}
-let showBooks = document.getElementById("libros-de-la-saga");
-showBooks.addEventListener("click", goToBooks);
-
 // Go to fun facts
 function goToFunFacts() {
   let funFact = document.getElementById("second-page");
@@ -36,6 +26,16 @@ function goToFunFacts() {
 }
 let showFunFact = document.getElementById("datos-curiosos");
 showFunFact.addEventListener("click", goToFunFacts);
+
+// Go to books
+function goToBooks() {
+  let books = document.getElementById("second-page");
+  books.style.display = "block";
+  let frontPage = document.getElementById("front-page");
+  frontPage.style.display = "none";
+}
+let showBooks = document.getElementById("libros-de-la-saga");
+showBooks.addEventListener("click", goToBooks);
 
 //keep the data from the objects
 const mainCharacters = data.mainCharacters;
@@ -70,7 +70,7 @@ mainCharacters.forEach((character) => {
   document.getElementById("info-main-characters").appendChild(div);
 });
 
-//Clear after each filter
+//clear after each filter
 let clear = document.getElementById("select-character");
 clear.addEventListener("change", clearFilter);
 
@@ -78,8 +78,7 @@ function clearFilter() {
   document.getElementById("info-characters").innerHTML = " ";
 }
 
-//"filter" to show all characters by house
-
+//filter to show all characters by house
 let filterAllCharacters = document.getElementById("select-character");
 filterAllCharacters.addEventListener("change", filterByHouse);
 
@@ -98,8 +97,7 @@ function filterByHouse() {
   });
 }
 
-//"filter" to show all characters by gender
-
+//filter to show all characters by gender
 let filterAllCharactersByGender = document.getElementById("select-character");
 filterAllCharactersByGender.addEventListener("change", filterByGender);
 
@@ -118,6 +116,7 @@ function filterByGender() {
   });
 }
 
+//filter to show all characters by ancestry
 let filterAllCharactersByAncestry = document.getElementById("select-character");
 filterAllCharactersByAncestry.addEventListener("change", filterByAncestry);
 
@@ -183,3 +182,24 @@ funFacts.forEach((everyFunFact) => {
   divFunFact.appendChild(content);
   document.getElementById("info-fun-facts").appendChild(divFunFact);
 });
+
+/*function allCharacters() {
+  const div = document.createElement("div");
+  const h1 = document.createElement('h1');
+  h1.innerHTML = ("hola de prueba");
+  div.appendChild(h1);
+  document.getElementById("root2").appendChild(div);
+}
+
+let filterAllCharacters = document.getElementById("todos-los-personajes");
+filterAllCharacters.addEventListener("change", allCharacters);*/
+/*function allCharacters() {characters.forEach((everyCharacter) => {
+  const div = document.createElement("div");
+  const name = document.createElement("h1");
+  name.innerHTML = everyCharacter.name;
+  const house = document.createElement("p");
+  house.innerHTML = everyCharacter.house;
+  div.appendChild(name);
+  div.appendChild(house);
+  document.getElementById("root").appendChild(div);
+});*/
