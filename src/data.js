@@ -19,11 +19,24 @@
 
 // Filtrar por casa
 export const filterData = (data, condition) => {
-       const filterAllCharacters = data.filter(element => {
-       return element.house === condition;
-})
-return filterAllCharacters
-};
+       const filterByHouse = data.filter((element) => {
+         return element.house === condition;
+       });
+       return filterByHouse;
+     };
 
+//filtrar por genero
+export const filterGender = (data, condition) => {
+       const filterByGender = data.filter((element) => {
+         return element.gender === condition;
+       });
+       return filterByGender;
+     };
 
-
+//filtrar por pureza 
+export const filterAncestry = (data, condition) => {
+       const filterByAncestry = data.filter((element) => {
+         return element.ancestry === condition;
+       });
+       return filterByAncestry;
+     };

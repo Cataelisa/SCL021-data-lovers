@@ -1,6 +1,6 @@
 
 import data from "./data/harrypotter/harry.js";
-import {filterData} from "./data.js";
+import {filterData, filterGender, filterAncestry} from "./data.js";
  
 // Go the characters
   function goToCharacters() {
@@ -39,16 +39,15 @@ const books = data.books;
   document.getElementById("info-main-characters").appendChild(div);
 });
 
-//"filter" to show all characters
+//"filter" to show all characters by house
 
 let filterAllCharacters = document.getElementById("select-character");
-filterAllCharacters.addEventListener("change", filterAllCharacter);
+filterAllCharacters.addEventListener("change", filterByHouse);
 
-function filterAllCharacter() {
-    let selecEveryCharacter = document.getElementById("select-character").value;
-    let filterHouse = filterData(characters, selecEveryCharacter);
-    console.log(filterHouse);
-    filterHouse.forEach((everyCharacter) => {
+function filterByHouse() {
+  let selecEveryCharacter = document.getElementById("select-character").value;
+  let filterHouse = filterData(characters, selecEveryCharacter);
+  filterHouse.forEach((everyCharacter) => {
     const div = document.createElement("div");
     const name = document.createElement("h1");
     name.innerHTML = everyCharacter.name;
@@ -59,6 +58,45 @@ function filterAllCharacter() {
     document.getElementById("info-characters").appendChild(div);
   });
 }
+
+//"filter" to show all characters by gender
+
+let filterAllCharactersByGender = document.getElementById("select-character");
+filterAllCharactersByGender.addEventListener("change", filterByGender);
+
+function filterByGender() {
+  let selecEveryCharacter = document.getElementById("select-character").value;
+  let filterGenders = filterGender(characters, selecEveryCharacter);
+  filterGenders.forEach((everyCharacter) => {
+    const div = document.createElement("div");
+    const name = document.createElement("h1");
+    name.innerHTML = everyCharacter.name;
+    const gender = document.createElement("p");
+    gender.innerHTML = everyCharacter.gender;
+    div.appendChild(name);
+    div.appendChild(gender);
+    document.getElementById("info-characters").appendChild(div);
+  });
+}
+
+let filterAllCharactersByAncestry = document.getElementById("select-character");
+filterAllCharactersByAncestry.addEventListener("change", filterByAncestry);
+
+function filterByAncestry() {
+  let selecEveryCharacter = document.getElementById("select-character").value;
+  let filterAncestries = filterAncestry(characters, selecEveryCharacter);
+  filterAncestries.forEach((everyCharacter) => {
+    const div = document.createElement("div");
+    const name = document.createElement("h1");
+    name.innerHTML = everyCharacter.name;
+    const ancestry = document.createElement("p");
+    ancestry.innerHTML = everyCharacter.ancestry;
+    div.appendChild(name);
+    div.appendChild(ancestry);
+    document.getElementById("info-characters").appendChild(div);
+  });
+}
+
 
 // Go to books
 function goToBooks() {
