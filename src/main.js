@@ -1,15 +1,41 @@
 import data from "./data/harrypotter/harry.js";
-import { filterData, filterGender, filterAncestry } from "./data.js";
+import {
+  filterData,
+  filterGender,
+  filterAncestry,
+  orderAz,
+  orderZa,
+} from "./data.js";
 
 // Go the characters
 function goToCharacters() {
-  let characters = document.getElementById("info-main-characters");
+  let characters = document.getElementById("second-page");
   characters.style.display = "block";
   let frontPage = document.getElementById("front-page");
   frontPage.style.display = "none";
 }
 let showCharacters = document.getElementById("personajes");
 showCharacters.addEventListener("click", goToCharacters);
+
+// Go to books
+function goToBooks() {
+  let books = document.getElementById("second-page");
+  books.style.display = "block";
+  let frontPage = document.getElementById("front-page");
+  frontPage.style.display = "none";
+}
+let showBooks = document.getElementById("libros-de-la-saga");
+showBooks.addEventListener("click", goToBooks);
+
+// Go to fun facts
+function goToFunFacts() {
+  let funFact = document.getElementById("second-page");
+  funFact.style.display = "block";
+  let frontPage = document.getElementById("front-page");
+  frontPage.style.display = "none";
+}
+let showFunFact = document.getElementById("datos-curiosos");
+showFunFact.addEventListener("click", goToFunFacts);
 
 //keep the data from the objects
 const mainCharacters = data.mainCharacters;
@@ -18,6 +44,14 @@ const funFacts = data.funFacts;
 const spells = data.spells;
 const potions = data.potions;
 const books = data.books;
+
+//Clear main characters
+let clearDefault = document.getElementById("select-character");
+clearDefault.addEventListener("change", clearMainCharacters);
+
+function clearMainCharacters() {
+  document.getElementById("info-main-characters").innerHTML = " ";
+}
 
 //contain and show main characters by default
 mainCharacters.forEach((character) => {
@@ -35,6 +69,14 @@ mainCharacters.forEach((character) => {
   div.appendChild(house);
   document.getElementById("info-main-characters").appendChild(div);
 });
+
+//Clear after each filter
+let clear = document.getElementById("select-character");
+clear.addEventListener("change", clearFilter);
+
+function clearFilter() {
+  document.getElementById("info-characters").innerHTML = " ";
+}
 
 //"filter" to show all characters by house
 
@@ -94,15 +136,20 @@ function filterByAncestry() {
   });
 }
 
-// Go to books
-function goToBooks() {
-  let books = document.getElementById("characters");
-  books.style.display = "block";
-  let frontPage = document.getElementById("front-page");
-  frontPage.style.display = "none";
-}
-let showBooks = document.getElementById("libros-de-la-saga");
-showBooks.addEventListener("click", goToBooks);
+//Order characters from A-Z or Z-A
+const orderCharacters = document.getElementById("order-characters");
+const charactersContainer = document.getElementById("info-characters");
+orderCharacters.addEventListener("change", function () {
+  if (orderCharacters.value === "a-z") {
+    orderAz(characters);
+    charactersContainer.innerHTML = " ";
+    //showCharacters();//
+  } else if (orderCharacters.value === "z-a") {
+    orderZa(characters);
+    charactersContainer.innerHTML = " ";
+    //showCharacters();
+  }
+});
 
 //show the books
 books.forEach((everyBook) => {
@@ -122,4 +169,17 @@ books.forEach((everyBook) => {
   divBooks.appendChild(releaseDay);
   divBooks.sppendChild(description);
   document.getElementById("info-books").appendChild(divBooks);
+});
+
+//show the fun facts
+funFacts.forEach((everyFunFact) => {
+  const divFunFact = document.createElement("div");
+  divFunFact.className = "funFact-cards";
+  const type = document.createElement("h1");
+  type.innerHTML = everyFunFact.type;
+  const content = document.createElement("p");
+  content.innerHTML = everyFunFact.content;
+  divFunFact.appendChild(type);
+  divFunFact.appendChild(content);
+  document.getElementById("info-fun-facts").appendChild(divFunFact);
 });
