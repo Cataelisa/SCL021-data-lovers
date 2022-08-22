@@ -162,7 +162,7 @@ orderCharacters.addEventListener("change", function () {
   divBooks.appendChild(bookCover);
   divBooks.appendChild(title);
   divBooks.appendChild(releaseDay);
-  divBooks.sppendChild(description);
+  divBooks.appendChild(description);
   document.getElementById("info-books").appendChild(divBooks);
 });
 
