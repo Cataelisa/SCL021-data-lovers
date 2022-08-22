@@ -1,16 +1,21 @@
-
 import data from "./data/harrypotter/harry.js";
-import {filterData, filterGender, filterAncestry, orderAz, orderZa } from "./data.js";
- 
+import {
+  filterData,
+  filterGender,
+  filterAncestry,
+  orderAz,
+  orderZa,
+} from "./data.js";
+
 // Go the characters
-  function goToCharacters() {
-    let characters = document.getElementById("second-page");
-    characters.style.display = "block";
-    let frontPage = document.getElementById("front-page");
-    frontPage.style.display = "none";
-  }
-    let showCharacters = document.getElementById("personajes");
-    showCharacters.addEventListener("click", goToCharacters);
+function goToCharacters() {
+  let characters = document.getElementById("second-page");
+  characters.style.display = "block";
+  let frontPage = document.getElementById("front-page");
+  frontPage.style.display = "none";
+}
+let showCharacters = document.getElementById("personajes");
+showCharacters.addEventListener("click", goToCharacters);
 
 // Go to fun facts
 function goToFunFacts() {
@@ -29,8 +34,8 @@ function goToBooks() {
   let frontPage = document.getElementById("front-page");
   frontPage.style.display = "none";
 }
-  let showBooks = document.getElementById("libros-de-la-saga");
-  showBooks.addEventListener("click", goToBooks);
+let showBooks = document.getElementById("libros-de-la-saga");
+showBooks.addEventListener("click", goToBooks);
 
 //keep the data from the objects
 const mainCharacters = data.mainCharacters;
@@ -49,7 +54,7 @@ function clearMainCharacters() {
 }
 
 //contain and show main characters by default
-  mainCharacters.forEach((character) => {
+mainCharacters.forEach((character) => {
   const div = document.createElement("div");
   const image = document.createElement("img");
   image.src = character.photo;
@@ -82,10 +87,15 @@ function filterByHouse() {
   let filterHouse = filterData(characters, selecEveryCharacter);
   filterHouse.forEach((everyCharacter) => {
     const div = document.createElement("div");
+    div.className = "cards";
+    const image = document.createElement("img");
+    image.src = "incognitocards.png";
+    image.className = "character";
     const name = document.createElement("h1");
     name.innerHTML = everyCharacter.name;
     const house = document.createElement("p");
     house.innerHTML = everyCharacter.house;
+    div.appendChild(image);
     div.appendChild(name);
     div.appendChild(house);
     document.getElementById("info-characters").appendChild(div);
@@ -101,10 +111,15 @@ function filterByGender() {
   let filterGenders = filterGender(characters, selecEveryCharacter);
   filterGenders.forEach((everyCharacter) => {
     const div = document.createElement("div");
+    div.className = "cards";
+    const image = document.createElement("img");
+    image.src = "incognitocards.png";
+    image.className = "character";
     const name = document.createElement("h1");
     name.innerHTML = everyCharacter.name;
     const gender = document.createElement("p");
     gender.innerHTML = everyCharacter.gender;
+    div.appendChild(image);
     div.appendChild(name);
     div.appendChild(gender);
     document.getElementById("info-characters").appendChild(div);
@@ -120,10 +135,15 @@ function filterByAncestry() {
   let filterAncestries = filterAncestry(characters, selecEveryCharacter);
   filterAncestries.forEach((everyCharacter) => {
     const div = document.createElement("div");
+    div.className = "cards";
+    const image = document.createElement("img");
+    image.src = "incognitocards.png";
+    image.className = "character";
     const name = document.createElement("h1");
     name.innerHTML = everyCharacter.name;
     const ancestry = document.createElement("p");
     ancestry.innerHTML = everyCharacter.ancestry;
+    div.appendChild(image);
     div.appendChild(name);
     div.appendChild(ancestry);
     document.getElementById("info-characters").appendChild(div);
@@ -145,9 +165,8 @@ orderCharacters.addEventListener("change", function () {
   }
 });
 
-
 //show the books
-  books.forEach((everyBook) => {
+books.forEach((everyBook) => {
   const divBooks = document.createElement("div");
   const bookCover = document.createElement("img");
   bookCover.src = everyBook.photo;
@@ -179,9 +198,6 @@ funFacts.forEach((everyFunFact) => {
   document.getElementById("info-fun-facts").appendChild(divFunFact);
 });
 
-
-
-
 /*function allCharacters() {
   const div = document.createElement("div");
   const h1 = document.createElement('h1');
@@ -201,11 +217,4 @@ filterAllCharacters.addEventListener("change", allCharacters);*/
   div.appendChild(name);
   div.appendChild(house);
   document.getElementById("root").appendChild(div);
-});
-
-}
-let filterAllCharacters = document.getElementById("todos-los-personajes");
-filterAllCharacters.addEventListener("click", allCharacters);*/
-
-
-
+});*/
