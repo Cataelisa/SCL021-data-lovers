@@ -6,13 +6,13 @@ import {
   orderAz,
   orderZa,
   filterSpellType,
-  orderSpellsAz,
-  orderSpellsZa,
   orderPotionsAz,
   orderPotionsZa,
+  orderSpellsZa,
+  orderSpellsAz,
 } from "./data.js";
 
-// Go to the characters
+// Go to characters
 function goToCharacters() {
   let characters = document.getElementById("second-page");
   characters.style.display = "block";
@@ -97,7 +97,7 @@ mainCharacters.forEach((character) => {
   document.getElementById("info-main-characters").appendChild(div);
 });
 
-//clear after each filter
+//clear main characters and after each filter
 let clear = document.getElementById("select-character");
 clear.addEventListener("change", clearFilter);
 
@@ -193,19 +193,19 @@ filterSpellsByType.addEventListener("change", filterByType);
 function filterByType() {
   let selectSpells = document.getElementById("select-spells").value;
   let filterType = filterSpellType(spells, selectSpells);
-  filterType.forEach((everySpell) => {
+  filterType.forEach((everySpells) => {
     const divSpells = document.createElement("div");
     divSpells.className = "spells-cards";
     const nameSpells = document.createElement("h1");
-    nameSpells.innerHTML = everySpell.name;
+    nameSpells.innerHTML = everySpells.name;
     const pronunciation = document.createElement("p");
-    pronunciation.innerHTML = everySpell.pronunciation;
+    pronunciation.innerHTML = everySpells.pronunciation;
     const spellType = document.createElement("p");
-    spellType.innerHTML = everySpell.spell_type;
+    spellType.innerHTML = everySpells.spell_type;
     const descriptionSpells = document.createElement("p");
-    descriptionSpells.innerHTML = everySpell.description;
+    descriptionSpells.innerHTML = everySpells.description;
     const mention = document.createElement("p");
-    mention.innerHTML = everySpell.mention;
+    mention.innerHTML = everySpells.mention;
     divSpells.appendChild(nameSpells);
     divSpells.appendChild(pronunciation);
     divSpells.appendChild(spellType);
@@ -264,55 +264,6 @@ orderPotions.addEventListener("change", function () {
   }
 });
 
-function allPotions() {
-  potions.forEach((everyPotions) => {
-    const divPotions = document.createElement("div");
-    divPotions.className = "potions-cards";
-    const namePotions = document.createElement("h1");
-    namePotions.innerHTML = everyPotions.name;
-    const descriptionPotions = document.createElement("p");
-    descriptionPotions.innerHTML = everyPotions.description;
-    divPotions.appendChild(namePotions);
-    divPotions.appendChild(descriptionPotions);
-    document.getElementById("info-potions").appendChild(divPotions);
-  });
-}
-
-//show spells
-spells.forEach((everySpell) => {
-  const divSpells = document.createElement("div");
-  divSpells.className = "spells-cards";
-  const nameSpells = document.createElement("h1");
-  nameSpells.innerHTML = everySpell.name;
-  const pronunciation = document.createElement("p");
-  pronunciation.innerHTML = everySpell.pronunciation;
-  const spellType = document.createElement("p");
-  spellType.innerHTML = everySpell.spell_type;
-  const descriptionSpells = document.createElement("p");
-  descriptionSpells.innerHTML = everySpell.description;
-  const mention = document.createElement("p");
-  mention.innerHTML = everySpell.mention;
-  divSpells.appendChild(nameSpells);
-  divSpells.appendChild(pronunciation);
-  divSpells.appendChild(spellType);
-  divSpells.appendChild(descriptionSpells);
-  divSpells.appendChild(mention);
-  document.getElementById("info-spells").appendChild(divSpells);
-});
-
-//show potions
-potions.forEach((everyPotions) => {
-  const divPotions = document.createElement("div");
-  divPotions.className = "potions-cards";
-  const namePotions = document.createElement("h1");
-  namePotions.innerHTML = everyPotions.name;
-  const descriptionPotions = document.createElement("p");
-  descriptionPotions.innerHTML = everyPotions.description;
-  divPotions.appendChild(namePotions);
-  divPotions.appendChild(descriptionPotions);
-  document.getElementById("info-potions").appendChild(divPotions);
-});
-
 //show books
 books.forEach((everyBook) => {
   const divBooks = document.createElement("div");
@@ -344,4 +295,52 @@ funFacts.forEach((everyFunFact) => {
   divFunFact.appendChild(type);
   divFunFact.appendChild(content);
   document.getElementById("info-fun-facts").appendChild(divFunFact);
+});
+
+//show potions
+potions.forEach((everyPotions) => {
+  const divPotions = document.createElement("div");
+  divPotions.className = "potions-cards";
+  const namePotions = document.createElement("h1");
+  namePotions.innerHTML = everyPotions.name;
+  const descriptionPotions = document.createElement("p");
+  descriptionPotions.innerHTML = everyPotions.description;
+  divPotions.appendChild(namePotions);
+  divPotions.appendChild(descriptionPotions);
+  document.getElementById("info-potions").appendChild(divPotions);
+});
+function allPotions() {
+  potions.forEach((everyPotions) => {
+    const divPotions = document.createElement("div");
+    divPotions.className = "potions-cards";
+    const namePotions = document.createElement("h1");
+    namePotions.innerHTML = everyPotions.name;
+    const descriptionPotions = document.createElement("p");
+    descriptionPotions.innerHTML = everyPotions.description;
+    divPotions.appendChild(namePotions);
+    divPotions.appendChild(descriptionPotions);
+    document.getElementById("info-potions").appendChild(divPotions);
+  });
+}
+
+//show spells
+spells.forEach((everySpells) => {
+  const divSpells = document.createElement("div");
+  divSpells.className = "spells-cards";
+  const nameSpells = document.createElement("h1");
+  nameSpells.innerHTML = everySpells.name;
+  const pronunciation = document.createElement("p");
+  pronunciation.innerHTML = everySpells.pronunciation;
+  const spellType = document.createElement("p");
+  spellType.innerHTML = everySpells.spell_type;
+  const descriptionSpells = document.createElement("p");
+  descriptionSpells.innerHTML = everySpells.description;
+  const mention = document.createElement("p");
+  mention.innerHTML = everySpells.mention;
+  divSpells.appendChild(nameSpells);
+  divSpells.appendChild(pronunciation);
+  divSpells.appendChild(spellType);
+  divSpells.appendChild(descriptionSpells);
+  divSpells.appendChild(mention);
+  document.getElementById("info-spells").appendChild(divSpells);
 });
