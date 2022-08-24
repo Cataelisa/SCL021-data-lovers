@@ -11,7 +11,15 @@ El proyecto **Harry Potter Lovers** es una página que muestra información deta
 
 [![Img-final.png](https://i.postimg.cc/zGBPZJtQ/Img-final.png)](https://postimg.cc/nCy1qttK)
 
-  
+[![final-personajes.png](https://i.postimg.cc/v89G7C16/final-personajes.png)](https://postimg.cc/6TWstjf9)
+
+[![final-hechizos.png](https://i.postimg.cc/NFhBqknM/final-hechizos.png)](https://postimg.cc/VrF3XnmQ)
+
+[![final-libros.png](https://i.postimg.cc/NfkYSTks/final-libros.png)](https://postimg.cc/9r0vqDkK)
+
+[![final-datos-curiosos.png](https://i.postimg.cc/02R2L9gf/final-datos-curiosos.png)](https://postimg.cc/pyCHjbLh)
+
+[![final-pociones.png](https://i.postimg.cc/J4LMpKJY/final-pociones.png)](https://postimg.cc/JtPfnNpj)
 
  ## Investigación UX:
     
