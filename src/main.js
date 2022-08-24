@@ -5,12 +5,19 @@ import {
   filterAncestry,
   orderAz,
   orderZa,
+  filterSpellType,
+  orderSpellsAz,
+  orderSpellsZa,
+  orderPotionsAz,
+  orderPotionsZa,
 } from "./data.js";
 
-// Go the characters
+// Go to the characters
 function goToCharacters() {
   let characters = document.getElementById("second-page");
   characters.style.display = "block";
+  let allCharacters = document.getElementById("all-characters");
+  allCharacters.style.display = "block";
   let frontPage = document.getElementById("front-page");
   frontPage.style.display = "none";
 }
@@ -21,6 +28,8 @@ showCharacters.addEventListener("click", goToCharacters);
 function goToFunFacts() {
   let funFact = document.getElementById("second-page");
   funFact.style.display = "block";
+  let divInfoFunFacts = document.getElementById("info-fun-facts");
+  divInfoFunFacts.style.display = "block";
   let frontPage = document.getElementById("front-page");
   frontPage.style.display = "none";
 }
@@ -31,11 +40,37 @@ showFunFact.addEventListener("click", goToFunFacts);
 function goToBooks() {
   let books = document.getElementById("second-page");
   books.style.display = "block";
+  let divInfoBooks = document.getElementById("all-books");
+  divInfoBooks.style.display = "block";
   let frontPage = document.getElementById("front-page");
   frontPage.style.display = "none";
 }
 let showBooks = document.getElementById("libros-de-la-saga");
 showBooks.addEventListener("click", goToBooks);
+
+// Go to spells
+function goToSpells() {
+  let spells = document.getElementById("second-page");
+  spells.style.display = "block";
+  let divInfoSpells = document.getElementById("all-spells");
+  divInfoSpells.style.display = "block";
+  let frontPage = document.getElementById("front-page");
+  frontPage.style.display = "none";
+}
+let showSpells = document.getElementById("hechizos");
+showSpells.addEventListener("click", goToSpells);
+
+// Go to potions
+function goToPotions() {
+  let potions = document.getElementById("second-page");
+  potions.style.display = "block";
+  let divInfoPotions = document.getElementById("all-potions");
+  divInfoPotions.style.display = "block";
+  let frontPage = document.getElementById("front-page");
+  frontPage.style.display = "none";
+}
+let showPotions = document.getElementById("pocimas");
+showPotions.addEventListener("click", goToPotions);
 
 //keep the data from the objects
 const mainCharacters = data.mainCharacters;
@@ -44,14 +79,6 @@ const funFacts = data.funFacts;
 const spells = data.spells;
 const potions = data.potions;
 const books = data.books;
-
-//Clear main characters
-let clearDefault = document.getElementById("select-character");
-clearDefault.addEventListener("change", clearMainCharacters);
-
-function clearMainCharacters() {
-  document.getElementById("info-main-characters").innerHTML = " ";
-}
 
 //contain and show main characters by default
 mainCharacters.forEach((character) => {
@@ -75,7 +102,8 @@ let clear = document.getElementById("select-character");
 clear.addEventListener("change", clearFilter);
 
 function clearFilter() {
-  document.getElementById("info-characters").innerHTML = " ";
+  document.getElementById("info-characters").innerHTML = "";
+  document.getElementById("info-main-characters").innerHTML = "";
 }
 
 //filter to show all characters by house
@@ -150,6 +178,43 @@ function filterByAncestry() {
   });
 }
 
+//clear after each spell filter
+let clearSpell = document.getElementById("select-spells");
+clearSpell.addEventListener("change", clearSpellFilter);
+
+function clearSpellFilter() {
+  document.getElementById("info-spells").innerHTML = " ";
+}
+
+//filter to show the spells by type
+let filterSpellsByType = document.getElementById("select-spells");
+filterSpellsByType.addEventListener("change", filterByType);
+
+function filterByType() {
+  let selectSpells = document.getElementById("select-spells").value;
+  let filterType = filterSpellType(spells, selectSpells);
+  filterType.forEach((everySpell) => {
+    const divSpells = document.createElement("div");
+    divSpells.className = "spells-cards";
+    const nameSpells = document.createElement("h1");
+    nameSpells.innerHTML = everySpell.name;
+    const pronunciation = document.createElement("p");
+    pronunciation.innerHTML = everySpell.pronunciation;
+    const spellType = document.createElement("p");
+    spellType.innerHTML = everySpell.spell_type;
+    const descriptionSpells = document.createElement("p");
+    descriptionSpells.innerHTML = everySpell.description;
+    const mention = document.createElement("p");
+    mention.innerHTML = everySpell.mention;
+    divSpells.appendChild(nameSpells);
+    divSpells.appendChild(pronunciation);
+    divSpells.appendChild(spellType);
+    divSpells.appendChild(descriptionSpells);
+    divSpells.appendChild(mention);
+    document.getElementById("info-spells").appendChild(divSpells);
+  });
+}
+
 //Order characters from A-Z or Z-A
 const orderCharacters = document.getElementById("order-characters");
 const charactersContainer = document.getElementById("info-characters");
@@ -157,15 +222,98 @@ orderCharacters.addEventListener("change", function () {
   if (orderCharacters.value === "a-z") {
     orderAz(characters);
     charactersContainer.innerHTML = " ";
-    //showCharacters();//
+    filterByHouse();
+    filterByGender();
+    filterByAncestry();
   } else if (orderCharacters.value === "z-a") {
     orderZa(characters);
     charactersContainer.innerHTML = " ";
-    //showCharacters();
+    filterByHouse();
+    filterByGender();
+    filterByAncestry();
   }
 });
 
-//show the books
+//Order spells from A-Z or Z-A
+const orderSpells = document.getElementById("order-spells");
+const spellsContainer = document.getElementById("info-spells");
+orderSpells.addEventListener("change", function () {
+  if (orderSpells.value === "a-z") {
+    orderSpellsAz(spells);
+    spellsContainer.innerHTML = " ";
+    filterByType();
+  } else if (orderSpells.value === "z-a") {
+    orderSpellsZa(spells);
+    spellsContainer.innerHTML = " ";
+    filterByType();
+  }
+});
+
+//Order potions from A-Z or Z-A
+const orderPotions = document.getElementById("select-order-potions");
+const potionsContainer = document.getElementById("info-potions");
+orderPotions.addEventListener("change", function () {
+  if (orderPotions.value === "ascendente") {
+    orderPotionsAz(potions);
+    potionsContainer.innerHTML = " ";
+    allPotions();
+  } else if (orderPotions.value === "descendente") {
+    orderPotionsZa(potions);
+    potionsContainer.innerHTML = " ";
+    allPotions();
+  }
+});
+
+function allPotions() {
+  potions.forEach((everyPotions) => {
+    const divPotions = document.createElement("div");
+    divPotions.className = "potions-cards";
+    const namePotions = document.createElement("h1");
+    namePotions.innerHTML = everyPotions.name;
+    const descriptionPotions = document.createElement("p");
+    descriptionPotions.innerHTML = everyPotions.description;
+    divPotions.appendChild(namePotions);
+    divPotions.appendChild(descriptionPotions);
+    document.getElementById("info-potions").appendChild(divPotions);
+  });
+}
+
+//show spells
+spells.forEach((everySpell) => {
+  const divSpells = document.createElement("div");
+  divSpells.className = "spells-cards";
+  const nameSpells = document.createElement("h1");
+  nameSpells.innerHTML = everySpell.name;
+  const pronunciation = document.createElement("p");
+  pronunciation.innerHTML = everySpell.pronunciation;
+  const spellType = document.createElement("p");
+  spellType.innerHTML = everySpell.spell_type;
+  const descriptionSpells = document.createElement("p");
+  descriptionSpells.innerHTML = everySpell.description;
+  const mention = document.createElement("p");
+  mention.innerHTML = everySpell.mention;
+  divSpells.appendChild(nameSpells);
+  divSpells.appendChild(pronunciation);
+  divSpells.appendChild(spellType);
+  divSpells.appendChild(descriptionSpells);
+  divSpells.appendChild(mention);
+  document.getElementById("info-spells").appendChild(divSpells);
+});
+
+//show potions
+potions.forEach((everyPotions) => {
+  const divPotions = document.createElement("div");
+  divPotions.className = "potions-cards";
+  const namePotions = document.createElement("h1");
+  namePotions.innerHTML = everyPotions.name;
+  const descriptionPotions = document.createElement("p");
+  descriptionPotions.innerHTML = everyPotions.description;
+  divPotions.appendChild(namePotions);
+  divPotions.appendChild(descriptionPotions);
+  document.getElementById("info-potions").appendChild(divPotions);
+});
+
+//show books
 books.forEach((everyBook) => {
   const divBooks = document.createElement("div");
   const bookCover = document.createElement("img");
@@ -181,11 +329,11 @@ books.forEach((everyBook) => {
   divBooks.appendChild(bookCover);
   divBooks.appendChild(title);
   divBooks.appendChild(releaseDay);
-  divBooks.sppendChild(description);
+  divBooks.appendChild(description);
   document.getElementById("info-books").appendChild(divBooks);
 });
 
-//show the fun facts
+//show fun facts
 funFacts.forEach((everyFunFact) => {
   const divFunFact = document.createElement("div");
   divFunFact.className = "funFact-cards";
@@ -197,24 +345,3 @@ funFacts.forEach((everyFunFact) => {
   divFunFact.appendChild(content);
   document.getElementById("info-fun-facts").appendChild(divFunFact);
 });
-
-/*function allCharacters() {
-  const div = document.createElement("div");
-  const h1 = document.createElement('h1');
-  h1.innerHTML = ("hola de prueba");
-  div.appendChild(h1);
-  document.getElementById("root2").appendChild(div);
-}
-
-let filterAllCharacters = document.getElementById("todos-los-personajes");
-filterAllCharacters.addEventListener("change", allCharacters);*/
-/*function allCharacters() {characters.forEach((everyCharacter) => {
-  const div = document.createElement("div");
-  const name = document.createElement("h1");
-  name.innerHTML = everyCharacter.name;
-  const house = document.createElement("p");
-  house.innerHTML = everyCharacter.house;
-  div.appendChild(name);
-  div.appendChild(house);
-  document.getElementById("root").appendChild(div);
-});*/

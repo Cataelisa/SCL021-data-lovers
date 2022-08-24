@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Data Lovers</title>
+    <title>Harry Potter Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
@@ -20,8 +20,8 @@
 
         <main id="books-and-its-titles">
           <h1 id="titulo-elige-libro">Elige el libro que quieras:</h1>
-          <div>
-              <img src="Books.png" id="books-front-page" />
+          <div id="ruma-de-libros">
+            <img src="Books.png" id="books-front-page" />
               <div id="personajes">PERSONAJES</h2></div>
               <div id="hechizos"><h2>HECHIZOS</h2></div>
               <div id="datos-curiosos"><h2>DATOS CURIOSOS</h2></div>
@@ -111,48 +111,87 @@
 
         <!-- información dinámica (Segunda Página)-->
        <main>
-          
 
-          <div id="filter-order"> 
-            <h1 id="title-characters">PERSONAJES</h1>
-            
+        <div id="root">
+
+          <div id = "all-characters">
+            <div id="filter-order-characters" class="filters-and-orders"> 
+              <h1 class="titles">PERSONAJES</h1>
+              
+              <label class="lebels">Filtrar:</label> 
+              <select id="select-character">
+                  <option>Selecciona opción</option>
+                  <option value="Gryffindor">Gryffindor</option>
+                  <option value="Hufflepuff">Hufflepuff</option>
+                  <option value="Ravenclaw">Ravenclaw</option>
+                  <option value="Slytherin">Slytherin</option>
+                  <option value="Muggle">Muggle</option>
+                  <option value="Pure-blood">Sangre pura</option>
+                  <option value="Female">Mujeres</option>
+                  <option value="Male">Hombres</option>
+  
+              </select>
              
-            
-            <label class="lebels">Filtrar:</label> 
-            <select id="select-character">
-                <option>Selecciona opción</option>
-                <option value="Gryffindor">Gryffindor</option>
-                <option value="Hufflepuff">Hufflepuff</option>
-                <option value="Ravenclaw">Ravenclaw</option>
-                <option value="Slytherin">Slytherin</option>
-                <option value="Muggle">Muggle</option>
-                <option value="Pure-blood">Sangre pura</option>
-                <option value="Female">Mujeres</option>
-                <option value="Male">Hombres</option>
-
-            </select>
-           
-            <label class="lebels">Ordenar por:</label> 
-            <select id="order-characters">
-                <option>Selecciona opción</option>
-                <option value="a-z">A - Z</option>
-                <option value="z-a">Z - A</option>
-            </select>
-          
-          </div>
-            <div id="root">
-              <div class= "info-div" id="info-main-characters"></div>
-                 <!-- <h1 id="title-characters">PERSONAJES PRINCIPALES</h1>-->
-              <div class= "info-div" id="info-characters"></div>
-              <div class= "info-div" id="info-books"></div>
-                  <!--<h1 id="title-characters">LIBROS DE LA SAGA</h1>-->
-              <div class= "info-div" id="info-spells"></div>
-              <div class= "info-div" id="info-fun-facts"></div>
-              <div class= "info-div" id="info-potions"></div>
+              <label class="lebels">Ordenar por:</label> 
+              <select id="order-characters">
+                  <option>Selecciona opción</option>
+                  <option value="a-z">A - Z</option>
+                  <option value="z-a">Z - A</option>
+              </select>
             </div>
+            <div class= "info-div" id="info-main-characters"></div>
+            <div class= "info-div" id="info-characters"></div>
+          </div>
+              
+          <div id="all-books">
+            <h1 class="titles" id="title-libros">LIBROS DE LA SAGA</h1>
+            <div class= "info-div" id="info-books"></div>
+          </div>
+
+          <div id="all-spells">
+             <div id="filter-order-spells" class="filters-and-orders"> 
+                    <h1 class="titles">HECHIZOS</h1>
+                    <label class="lebels">Filtrar:</label> 
+                    <select id="select-spells">
+                      <option>Selecciona opción</option>
+                      <option value="Transfiguration">Transformación</option>
+                      <option value="Charm">Encantamiento</option>
+                      <option value="Jinx">Embrujo</option>
+                      <option value="Hex">Maleficio</option>
+                      <option value="Curse">Maldición</option>
+                      <option value="Counter-Spell">Contrahechizo</option>
+                      <option value="Healing Spell">Curación</option>
+                    </select>
+                    <label class="lebels">Ordenar por:</label> 
+                    <select id="order-spells">
+                        <option>Selecciona opción</option>
+                        <option value="a-z">A - Z</option>
+                        <option value="z-a">Z - A</option>
+                    </select>
+                 </div>
+             <div class= "info-div" id="info-spells"></div>  
+             </div>  
+             
+              <div class= "info-div" id="info-fun-facts">
+                <h1 class="titles" id="title-datos-curiosos">DATOS CURIOSOS</h1>
+              </div>
+ 
+              <div id="all-potions">
+                  <div id="order-potions" class="filters-and-orders"> 
+                    <h1 class="titles">POCIONES</h1>
+                    <label class="lebels">Ordenar por:</label> 
+                    <select id="select-order-potions">
+                        <option>Selecciona opción</option>
+                        <option value="ascendente">A - Z</option>
+                        <option value="descendente">Z - A</option>
+                    </select>
+                 </div>
+                 <div class= "info-div" id="info-potions"></div>
+                </div>
+          </div> <!-- root closure -->
           
         </main>
-    </div>
+    </div> <!-- second page closure -->
 
 <!-- Footer -->
       <footer>
