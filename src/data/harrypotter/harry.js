@@ -16170,7 +16170,7 @@ export default {
   books: [
     {
       "id": 1,
-      "photo": ".data/harrypotter/images/books/hp1.jpg",
+      "photo": "./data/harrypotter/images/books/hp1.jpg",
       "title": "Harry Potter and the Sorcerer's Stone",
       "releaseDay": "June 26, 1997",
       "author": "J. K. Rowling",

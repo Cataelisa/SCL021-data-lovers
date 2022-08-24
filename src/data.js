@@ -33,3 +33,35 @@ export const orderZa = (characters) => {
   let orderByZa = characters.sort((a, b) => b.name.localeCompare(a.name));
   return orderByZa;
 };
+
+// Filtrar hechizos por tipo de hechizo
+export const filterSpellType = (data, condition) => {
+       const filterBySpellType = data.filter((element) => {
+         return element.spell_type === condition;
+       });
+       return filterBySpellType;
+     };
+
+//Ordenar hechizos de la A - Z
+export const orderSpellsAz = (spells) => {
+       let orderSpellsByAz = spells.sort((a, b) => a.name.localeCompare(b.name));
+       return orderSpellsByAz;
+     };
+     
+     //Ordenar hechizos de la Z - A
+     export const orderSpellsZa = (spells) => {
+       let orderSpellsByZa = spells.sort((a, b) => b.name.localeCompare(a.name));
+       return orderSpellsByZa;
+     };
+
+//Ordenar pociones de la A - Z
+export const orderPotionsAz = (potions) => {
+       let orderPotionsByAz = potions.sort((a, b) => a.name.localeCompare(b.name));
+       return orderPotionsByAz;
+     };
+     
+//Ordenar pociones de la Z - A
+     export const orderPotionsZa = (potions) => {
+       let orderPotionsByZa = potions.sort((a, b) => b.name.localeCompare(a.name));
+       return orderPotionsByZa;
+     }; 
